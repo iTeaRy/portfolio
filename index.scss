@@ -1,0 +1,136 @@
+html {
+  background: #136A36;
+  background: -webkit-linear-gradient(left, #136A36, #D9D6C7);
+  background: -moz-linear-gradient(left, #136A36, #D9D6C7);
+  background: linear-gradient(to right, #136A36, #D9D6C7);
+}
+body {
+	width: 100%;
+	margin: auto;
+	font-family: 'Work Sans', sans-serif;
+
+}
+
+.header {
+	display: flex;
+	flex-direction: row;
+  justify-content: center;
+  margin: 10px auto;
+  &__avatar {
+    width: 115.2px;
+    height: 153.6px;
+    margin-right: 10px;
+
+    border-radius: 15px;
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__contact {
+  	border-bottom: solid;
+  	border-color: #999999;
+
+    &-icon {
+    	width: 20px;
+    	height: 20px;
+    	margin-right: 5px;
+    }
+  }
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 22px;
+  margin-bottom: 7vw;
+  &__arrow-up {
+    display: none;
+  }
+  &__caption {
+    display: block;
+    border-bottom: solid;
+  	border-color: #013220;
+    text-align: center;
+    cursor: pointer;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  table {
+  border-collapse: collapse;
+  display: none;
+  tr {
+    border-bottom: 3px solid #013220;
+  }
+}
+  &__period {
+    width: 15%;
+    text-align: center;
+  }
+  &__name {
+    width: 50%;
+  }
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  font-weight: bold;
+  color: green;
+
+  &__arrow-right {
+    cursor: pointer;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  &__arrow-left {
+    cursor: pointer;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  &__slides {
+    width: 50%;
+    background-image: linear-gradient(to left bottom, #101928, #154050, #286c6c, #5f977a, #acbe84);
+    padding: 4%;
+  }
+  &__slide {
+    display: inline;
+    opacity: 0.5;
+    img {
+      width: 100%;
+      height: 30vw;
+    }
+    &-description {
+      position: relative;
+      font-size: 0.5em;
+      opacity: 1;
+      bottom: 0vw;
+      color: #ffffff;
+      right: -1vw;
+    }
+    &-link {
+      position: relative;
+      font-size: 0.5em;
+      opacity: 1;
+      bottom: -27vw;
+      color: #ffffff;
+      right: -1vw;
+    }
+  }
+}
+
+footer {
+	margin-top: 50px;
+}
