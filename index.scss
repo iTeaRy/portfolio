@@ -1,21 +1,26 @@
-html {
+body {
+  background: #000000;
+}
+.wrapper {
+	width: 100%;
+	margin:  0 auto;
+	font-family: 'Work Sans', sans-serif;
   background: #136A36;
   background: -webkit-linear-gradient(left, #136A36, #D9D6C7);
   background: -moz-linear-gradient(left, #136A36, #D9D6C7);
   background: linear-gradient(to right, #136A36, #D9D6C7);
+  overflow: hidden;
 }
-body {
-	width: 100%;
-	margin: auto;
-	font-family: 'Work Sans', sans-serif;
-
+iframe {
+  display: none;
+  height: 100vh;
 }
-
 .header {
 	display: flex;
 	flex-direction: row;
   justify-content: center;
-  margin: 10px auto;
+  margin: 0 auto;
+      padding-top: 20px;
   &__avatar {
     width: 115.2px;
     height: 153.6px;
@@ -130,7 +135,22 @@ body {
     }
   }
 }
-
-footer {
-	margin-top: 50px;
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.button {
+  width: 20%;
+  height: 50px;
+  display: inline-block;
+  margin: 25px 3%;
+  border: 1px solid #013220;
+  border-radius: 3px;
+  color: #ffffff;
+  background-color: #808080;
+  text-align: center;
+  line-height: 50px;
+  left: 40%;
+  cursor: pointer;
 }
