@@ -7,6 +7,11 @@
 		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
 		<link rel="stylesheet" href="index.css">
 		<link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+		<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+		<script src="https://unpkg.com/swiper/js/swiper.js"></script>
+		<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -62,35 +67,31 @@
 	  				</tbody>
 	  			</table>
 	      </div>
-	      <div class="projects">
-	        <div class="projects__arrow-left">
-	          ⍃
-	        </div>
-	        <div class="projects__slides">
-	          <div class="projects__slide">
-	            <div class="projects__slide-description">
-	              TheYalow
-	            </div>
-	            <a class="projects__slide-link" target="project" href="projects/theyalow/index.html">
-	              Click here to see the project
-	            </a>
-	            <img src="assets/images/img-TY.png" alt="img-TY.png">
-	          </div>
-	          <div class="projects__slide">
-	            <div class="projects__slide-description">
-	              Repair Design Project
-	            </div>
-	            <a class="projects__slide-link" target="project" href="projects/repair-design-project/index.html">
-	              Click here to see the project
-	            </a>
-	            <img src="assets/images/img-RDP.png" alt="img-TY.png">
-	          </div>
-	        </div>
-	        <div class="projects__arrow-right">
-	          ⍄
-	        </div>
-	      </div>
-				<iframe name = "project" width = "100%" height = "100%" src = "index.html"></iframe>
+				<div class="projects swiper-container">
+    			<div class="projects__slides swiper-wrapper">
+						<div class="projects__slide swiper-slide">
+							<div class="projects__slide-description">
+								TheYalow
+							</div>
+							<a class="projects__slide-link" target="project" href="projects/theyalow/index.html">
+								Click here to see the project
+							</a>
+							<img class="projects__slide-img" src="assets/images/img-TY.png" alt="img-TY.png">
+						</div>
+		      	<div class="projects__slide swiper-slide" >
+						 <div class="projects__slide-description">
+							 Repair Design Project
+						 </div>
+						 <a class="projects__slide-link" target="project" href="projects/repair-design-project/index.html">
+							 Click here to see the project
+						 </a>
+						 <img class="projects__slide-img" src="assets/images/img-RDP.png" alt="img-TY.png">
+					 	</div>
+		    </div>
+		    <div class="swiper-button-next"></div>
+		    <div class="swiper-button-prev"></div>
+		  </div>
+			<iframe name = "project" width = "100%" height = "100%" src = "index.html"></iframe>
 			</main>
 			<footer>
 				<div class="button" id="view">
@@ -101,8 +102,16 @@
 				</div>
 			</footer>
 		</div>
+	  <script>
+	    var swiper = new Swiper('.swiper-container', {
+	      navigation: {
+	        nextEl: '.swiper-button-next',
+	        prevEl: '.swiper-button-prev',
+	      },
+	    });
+			</script>
     <script src="scripts/expansion-panel.js"></script>
-    <script src="scripts/slider.js"></script>
+    <script src="scripts/linkToProjects.js"></script>
 		<script src="scripts/view.js"></script>
 	</body>
 </html>

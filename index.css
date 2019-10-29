@@ -1,15 +1,26 @@
 body {
   background: #000000; }
+  @media screen and (min-height: 957px) {
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly; } }
 
 .wrapper {
   width: 100%;
   margin: 0 auto;
   font-family: 'Work Sans', sans-serif;
-  background: #136A36;
-  background: -webkit-linear-gradient(left, #136A36, #D9D6C7);
-  background: -moz-linear-gradient(left, #136A36, #D9D6C7);
-  background: linear-gradient(to right, #136A36, #D9D6C7);
-  overflow: hidden; }
+  background-image: linear-gradient(to top, #010d1f, #1e1523, #2f1c23, #392724, #3e3429);
+  overflow: hidden;
+  color: #ffc75f;
+  height: 100%; }
+  @media screen and (min-height: 957px) {
+    .wrapper {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly; } }
 
 iframe {
   display: none;
@@ -22,8 +33,8 @@ iframe {
   margin: 0 auto;
   padding-top: 20px; }
   .header__avatar {
-    width: 115.2px;
-    height: 153.6px;
+    width: 160px;
+    height: 200px;
     margin-right: 10px;
     border-radius: 15px; }
   .header__contacts {
@@ -43,13 +54,14 @@ iframe {
   flex-direction: column;
   align-items: center;
   font-size: 22px;
-  margin-bottom: 7vw; }
+  margin-bottom: 7vw;
+  margin-top: 2vw; }
   .education__arrow-up {
     display: none; }
   .education__caption {
     display: block;
     border-bottom: solid;
-    border-color: #013220;
+    border-color: #999999;
     text-align: center;
     cursor: pointer;
     -moz-user-select: none;
@@ -59,8 +71,14 @@ iframe {
   .education table {
     border-collapse: collapse;
     display: none; }
+    @media screen and (max-width: 1000px) {
+      .education table {
+        font-size: 18px; } }
+    @media screen and (max-width: 500px) {
+      .education table {
+        font-size: 12px; } }
     .education table tr {
-      border-bottom: 3px solid #013220; }
+      border-bottom: 3px solid #999999; }
   .education__period {
     width: 15%;
     text-align: center; }
@@ -72,45 +90,40 @@ iframe {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 60px;
+  font-size: 30px;
   font-weight: bold;
-  color: green; }
-  .projects__arrow-right {
-    cursor: pointer;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    user-select: none; }
-  .projects__arrow-left {
-    cursor: pointer;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    user-select: none; }
+  width: 80%;
+  border-radius: 40px;
+  background-image: linear-gradient(to bottom, #010d1f, #1e1523, #2f1c23, #392724, #3e3429); }
+  @media screen and (max-width: 800px) {
+    .projects {
+      font-size: 25px; } }
   .projects__slides {
-    width: 50%;
-    background-image: linear-gradient(to left bottom, #101928, #154050, #286c6c, #5f977a, #acbe84);
     padding: 4%; }
   .projects__slide {
-    display: inline;
-    opacity: 0.5; }
+    opacity: 0.9; }
     .projects__slide img {
-      width: 100%;
-      height: 30vw; }
+      width: 100%; }
     .projects__slide-description {
       position: relative;
-      font-size: 0.5em;
       opacity: 1;
       bottom: 0vw;
       color: #ffffff;
-      right: -1vw; }
+      right: -1.5vw; }
+      @media screen and (max-width: 700px) {
+        .projects__slide-description {
+          font-size: 16px; } }
     .projects__slide-link {
       position: relative;
-      font-size: 0.5em;
       opacity: 1;
-      bottom: -27vw;
+      bottom: -37vw;
       color: #ffffff;
       right: -1vw; }
+      .projects__slide-link:hover {
+        color: #ffc75f; }
+      @media screen and (max-width: 700px) {
+        .projects__slide-link {
+          font-size: 12px; } }
 
 footer {
   display: flex;
@@ -122,13 +135,18 @@ footer {
   height: 50px;
   display: inline-block;
   margin: 25px 3%;
-  border: 1px solid #013220;
-  border-radius: 3px;
+  border-radius: 6px;
   color: #ffffff;
-  background-color: #808080;
+  background-color: #3e3429;
   text-align: center;
   line-height: 50px;
   left: 40%;
   cursor: pointer; }
+  .button:hover {
+    background-color: #ffc75f;
+    color: #000000; }
+  @media screen and (max-width: 375px) {
+    .button:first-child {
+      display: none; } }
 
 /*# sourceMappingURL=index.css.map */
